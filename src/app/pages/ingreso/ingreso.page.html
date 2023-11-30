@@ -1,0 +1,56 @@
+<ion-header >
+  <ion-toolbar color="#012C56">
+    <ion-img src="https://reqlut2.s3.sa-east-1.amazonaws.com/reqlut-images/duoc/logo_duoc_white.png?v=50.7"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="centrado-vertical">
+      <div class="ion-padding-vertical">
+
+        <ion-card class="ion-text-center ion-padding-vertical">
+        <ion-title class="ion-padding-top ion-text-center">
+          <ion-card>
+            <h1>DUOC PLUS</h1>
+            <p>Registro de usuario </p>
+          </ion-card>
+        </ion-title> 
+        </ion-card>
+
+        <br>
+
+        <ion-card class="ion-text-center ion-padding-vertical">
+          <ion-card-content>
+    
+            <ion-item>
+              <ion-input id="correo" [(ngModel)]="correo" type="text" label="Correo" labelPlacement="floating"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-input id="password" [(ngModel)]="password" type="password" label="Contraseña" labelPlacement="floating"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-button (click)="ingresar()" expand="block" fill="clear" shape="round">
+                Ingresar
+              </ion-button>
+            </ion-item>
+
+          </ion-card-content>
+    
+        <ion-label >
+          <br>
+          <a (click)="ingresarPaginaValidarCorreo()">Recuperar contraseña</a>
+        </ion-label>
+
+        <ion-label >
+          <br>
+          <a (click)="xd()">Registrarse</a>
+        </ion-label>
+    
+      </ion-card>
+    </div>
+
+
+  </div>
+</ion-content>

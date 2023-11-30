@@ -1,0 +1,35 @@
+// Pasos a seguir //
+
+
+/Instala Capacitor Android
+1.- npm i @capacitor/android@latest
+
+/Crea la carpeta "www", y abre el android studio
+/En el celular pide activar la depuración USB
+2.- ionic cap build android
+
+/Copia los archivos del proyecto web al proyecto android
+3.- npx cap copy android
+
+/Sincroniza y actualiza el proyecto con Capacitor, 
+/preparando las carpetas para su ejecución
+4.- npx cap sync android
+
+/Ejecuta el proyecto en el celular
+5.- npx cap run android
+
+
+/En android estudio el archivo .apk queda guardado en esta ruta
+.apk C:\Users\-\Desktop\faltaFirma\APK\release
+
+/En android estudio el archivo firmado y bundle queda guardado en esta ruta
+abb C:\Users\-\Desktop\faltaFirma\ABB\release
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+ /* Aplicar la imagen de fondo a todo el ion-content */
+ ion-content {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+  --background: transparent url('https://www.duoc.cl/wp-content/uploads/2020/05/header-sede-plaza-oeste.png') no-repeat center center / cover;
+}
+
+ion-header{
+  background-color: #012C56; /* Cambia el color de fondo a azul oscuro */
+  height: 15%; /* Cambia la altura según tus necesidades */
+}
+
+// /* Establecer márgenes inferiores en los ion-item e ion-img */
+// ion-item {
+//   --padding-bottom: 10px;
+// }
+
+ion-img {
+width: 100px;
+height: 100px;
+margin-left: 20px;
+}
+
+// .container {
+//     background-image: url('https://th.bing.com/th/id/R.bb7450e3c956d2111e8dd804fe9fb4fe?rik=0OgRvgOi90S98A&riu=http%3a%2f%2frrnn.duoc.cl%2fsites%2fdefault%2ffiles%2fsede_padre_alonso.jpg&ehk=rtDBT%2fKcs%2fE7o9CkEB9PBJWJHkO%2fMo5FJWep64V6P7I%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1'); 
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//   }
+  
+
+
+
+ion-button {
+  width: 100%;
+  margin-bottom: 12px;
+  color:#1A1A1A;
+  --background: #FFB800;
+  --background-hover: #FFB800;
+  --background-activated: #FFB800;
+  --background-focused: #FFB800;
+
+  --padding-top: 10px;
+  --padding-bottom: 10px
+}
+
+
+
+ion-card {
+  margin: auto;
+  max-width: 400px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-title {
+  color: #333333;
+}
+
+ion-item {
+  margin-bottom: 8px;
+}
+
+ion-label {
+  color: #333333;
+}
+
+
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

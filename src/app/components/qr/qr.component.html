@@ -1,0 +1,24 @@
+<ion-content class="ion-padding ion-text-center">
+  <br><br>
+  <hr>
+  <div class="sliding-text-container">
+    <div class="sliding-text">
+      <br><br>
+      Bienvenido(a) {{ nombre }} {{ apellido }}</div>
+  </div>
+
+  <br><br>
+
+  <ion-button *ngIf="!escaneando" (click)="comenzarEscaneoQR()">
+    Comenzar Escaneo de QR
+  </ion-button>
+
+  <ion-button *ngIf="escaneando && plataforma === 'web'" (click)="detenerEscaneoQR()">
+    Detener escaneo de QR
+  </ion-button>
+
+  <video #video [hidden]="!escaneando"></video>
+  <canvas #canvas hidden></canvas>
+
+</ion-content>
+

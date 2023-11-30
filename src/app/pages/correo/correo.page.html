@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="#012C56">
+    <ion-img src="https://reqlut2.s3.sa-east-1.amazonaws.com/reqlut-images/duoc/logo_duoc_white.png?v=50.7"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding-vertical">
+    <ion-card class="ion-text-center ion-padding-vertical">
+  
+      <ion-card-title class="ion-text-center">
+        <ion-label>
+          <h1>Recuperar Contraseña</h1>
+          <h2>Paso 1: ¡Ingrese su correo!</h2>
+        </ion-label>
+      </ion-card-title>
+  
+      <ion-card-content>
+
+        <ion-item>
+          <ion-input [(ngModel)]="correo" type="text" label="Correo" labelPlacement="floating"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-button (click)="ingresar()" expand="block" fill="clear" shape="round">
+            Ingresar
+          </ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="end">
+      <ion-button (click)="volverLogin()">
+        Volver
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

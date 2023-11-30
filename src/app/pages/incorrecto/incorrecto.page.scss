@@ -1,0 +1,35 @@
+ion-content {
+  --background: transparent url('https://www.duoc.cl/wp-content/uploads/2020/05/header-sede-plaza-oeste.png') no-repeat center center / cover;
+  }
+
+  ion-header#mi-encabezado {
+    background-color: #012C56; /* Cambia el color de fondo a azul oscuro */
+    height: 10%; /* Cambia la altura según tus necesidades */
+  }
+  
+  h1, p {
+    text-align: center;
+  }
+
+  ion-card {
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  ion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card-title ion-icon {
+    margin: 0 5px; /* Ajusta el espacio entre los íconos y el texto */
+  }
+  
+  ion-img{
+    width: 100px; 
+    height: 100px;
+    margin-left: 20px;
+}

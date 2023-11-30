@@ -1,0 +1,93 @@
+
+
+<ion-header [translucent]="true">
+  <ion-toolbar color="#012C56">
+    <ion-row align-items-center>
+      <ion-col size="2">
+        <ion-img id="inicio" src="https://reqlut2.s3.sa-east-1.amazonaws.com/reqlut-images/duoc/logo_duoc_white.png?v=50.7"></ion-img>
+      </ion-col>
+
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <app-qr id="qr" [hidden]="componente_actual !== 'qr'"></app-qr>
+  <app-miclase id="miclase" [hidden]="componente_actual !== 'miclase'"></app-miclase>
+  <app-foro [hidden]="componente_actual !== 'foro'"></app-foro>
+  <app-misdatos id="misdatos" [hidden]="componente_actual !== 'misdatos'"></app-misdatos>
+  <!-- Verifica si el usuario es admin antes de mostrar el componente -->
+  <app-admin 
+
+  [hidden]="componente_actual !== 'admin'" ></app-admin>
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="componente_actual" (ngModelChange)="cambiarComponente($event)">
+      <ion-segment-button *ngIf="nombre !== 'admin'" value="qr">
+        <ion-label>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code-scan" viewBox="0 0 16 16">
+            <path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z"/>
+            <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z"/>
+            <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z"/>
+            <path d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z"/>
+            <path d="M12 9h2V8h-2z"/>
+          </svg>
+
+        </ion-label>
+      </ion-segment-button>
+      <ion-segment-button *ngIf="nombre !== 'admin'" value="miclase">
+        <ion-label>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-range" viewBox="0 0 16 16">
+            <path d="M9 7a1 1 0 0 1 1-1h5v2h-5a1 1 0 0 1-1-1M1 9h4a1 1 0 0 1 0 2H1z"/>
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+          </svg>
+
+        </ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="foro">
+        <ion-label>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+          </svg>
+
+        </ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="misdatos">
+        <ion-label>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+          </svg>
+
+        </ion-label>
+      </ion-segment-button>
+    
+      <ion-segment-button *ngIf="nombre === 'admin'" value="admin">
+        <ion-label>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge" viewBox="0 0 16 16">
+            <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492z"/>
+          </svg>
+
+        </ion-label>
+      </ion-segment-button>
+      
+      
+    </ion-segment>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-button (click)="cerrarSesion()" expand="block" fill="clear" shape="round">
+      Cerrar sesión
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
